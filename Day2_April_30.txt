@@ -35,7 +35,7 @@ while(m!=0){
 input: 46537
 output: 7
 
-num = "46537";
+num = prompt("enter a number: ");
 max = 0;
 for (n of num) {
     if (n > 1) {
@@ -59,7 +59,7 @@ console.log(max);
 input: 5497351
 output: 10
 
-num = "46537";
+num = prompt("enter a number: ");
 max = 0;
 min=num[0]
 for (n of num) {
@@ -85,7 +85,7 @@ console.log(Number(max)+Number(min));
 input: 463482
 output: 8
 
-num = "463482";
+num = prompt("enter a number: ");
 max = 0;
 for (n of num) {
     if (n > 1) {
