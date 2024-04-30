@@ -1,0 +1,103 @@
+1) Program to print 1 to num, num to 1, -1 to -num, -num to -1 by using while loop
+-------------------------------------------------------------------------------------------------------------------
+const prompt=require("prompt-sync")();
+
+
+num= +prompt("enter a number: ");
+console.log("1 to num");
+let i=1
+while(i!=num+1){
+    console.log(i);
+    i++;
+}
+
+console.log("num to 1");
+let j=num
+while(j!=0){
+    console.log(j);
+    j--;
+}
+console.log("-1 to -num");
+let k=-1
+while(k!=-num-1){
+    console.log(k);
+    k--;
+}
+console.log("-num to -1");
+let m=-num
+while(m!=0){
+    console.log(m);
+    m++;
+}
+
+
+2) Write a program to find the largest prime in the given number
+input: 46537
+output: 7
+
+num = "46537";
+max = 0;
+for (n of num) {
+    if (n > 1) {
+        c = true;
+        for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+                c = false;
+                break;
+            }
+        }
+        if (c) {
+            if (max < n)
+                max = n;
+        }
+    }
+}
+console.log(max);
+
+
+3) Write a program to print the sum of largest and smallest prime digits in the given number
+input: 5497351
+output: 10
+
+num = "46537";
+max = 0;
+min=num[0]
+for (n of num) {
+    if (n > 1) {
+        c = true;
+        for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+                c = false;
+                break;
+            }
+        }
+        if (c) {
+            if (max < n)
+                max = n;
+            if(min>n)
+            min=n
+        }
+    }
+}
+console.log(Number(max)+Number(min));
+
+4) Write a program to print the largest non prime digit in the given number
+input: 463482
+output: 8
+
+num = "463482";
+max = 0;
+for (n of num) {
+    if (n > 1) {
+        c = true;
+        for (i = 2; i < n; i++) {
+            if (n % i == 0) {
+                if(max<n)
+                max=n;
+                c = false;
+                break;
+            }
+        }
+    }
+}
+console.log(max);
