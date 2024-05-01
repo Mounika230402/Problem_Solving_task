@@ -1,0 +1,140 @@
+1) Write a program to print the factorial of every digit in the number, do not consider a digit if it is repeated.
+---------------------------------------------
+input: 335645
+output: 6 120 720 24 
+
+function unique(str)
+{
+    let str1=[]
+    str1=str[0]
+    for(let i=1;i<str.length;i++){
+        c=0
+        for(let j=0;j<str1.length;j++)
+        {
+            if(str[i]==str1[j])
+            {
+                c++
+                break;
+            }
+        }
+        if(c==0)
+        str1+=str[i]
+    }
+    return str1;
+}
+function factorial(n){
+    fact=1
+    for(i=1;i<=n;i++){
+        fact*=i
+    }
+    return fact;
+}
+num=prompt("enter a number: ")
+
+str=""
+let unque=unique(num)
+for(n of unque){
+    str+=factorial(n)+" "
+}
+console.log(str)
+2) Write a program to print the factorial of a number in the below format.
+input: 5
+output:
+1*2*3*4*5=120
+input:3
+1*2*3=6
+------------------------------------------------------
+num=+prompt("enter a number: ");
+str=""
+fact=1
+for(i=1;i<=num;i++){
+    fact*=i
+    if(i==num)
+    str+=i+"="
+    else
+    str+=i+"*"
+}
+console.log(str+fact)
+
+
+3) Write a program to print the sum of prime numbers in the fibonacci series.
+input: 10
+output: 23 (0 1 1 2 3 5 8 13 21 34)
+
+----------------------------------------------------
+function isPrime(n){
+    if(n>1){
+        flag=0
+    for(let i=2;i<n;i++){
+        if(n%i==0){
+            flag=1
+            break
+        }
+    }
+    if(flag)
+    return false
+    else
+    return true
+    }
+    else
+    return false
+}
+num=+prompt("enter a number: ")
+let n1=0
+let n2=1
+let i=1
+sum=0
+while(i<num){
+    if(isPrime(n1)){
+    sum=sum+n1;
+}
+    let n3=n1+n2
+    n1=n2
+    n2=n3
+    i++;
+}
+console.log(sum)
+4) Write a program to find the nearest prime to the given number.
+input: 5
+Null
+input: 10
+11
+
+-----------------------------------------------------
+
+function isPrime(n){
+    if(n>1){
+        flag=0
+    for(let i=2;i<n;i++){
+        if(n%i==0){
+            flag=1
+            break
+        }
+    }
+    if(flag)
+    return false
+    else
+    return true
+    }
+    else
+    return false
+}
+
+n=+prompt("enter a number: ")
+i=1
+while(true){
+    if(isPrime(n-i) && isPrime(n+i)){
+    console.log("Null")
+break;}
+    else if(isPrime(n+i)){
+        console.log(n+i)
+        break;
+    }
+    else if(isPrime(n-i)){
+        console.log(n-i)
+        break;
+    }
+    else{
+        i++;
+    }     
+}
