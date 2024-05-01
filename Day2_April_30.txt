@@ -12,22 +12,22 @@ while(i!=num+1){
 }
 
 console.log("num to 1");
-let j=num
-while(j!=0){
-    console.log(j);
-    j--;
+i=num
+while(i!=0){
+    console.log(i);
+    i--;
 }
 console.log("-1 to -num");
-let k=-1
-while(k!=-num-1){
-    console.log(k);
-    k--;
+i=-1
+while(i!=-num-1){
+    console.log(i);
+    i--;
 }
 console.log("-num to -1");
-let m=-num
-while(m!=0){
-    console.log(m);
-    m++;
+i=-num
+while(i!=0){
+    console.log(i);
+    i++;
 }
 
 
