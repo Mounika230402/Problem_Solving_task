@@ -1,0 +1,55 @@
+1) Input: nums = [1,1,2]
+Output:[1,2,_]
+Explanation: Insert the underscores equal number of duplicates in the array.
+Input: nums = [0,0,1,1,1,2,2,3,3,4]
+Output: 5, nums = [0,1,2,3,4,,,,,_]
+
+nums=[0,0,1,1,1,2,2,3,3,4]
+emp=[]
+for(i of nums){
+    if(!emp.includes(i))
+        emp.push(i)
+}
+    let n=nums.length-emp.length
+    for(let i=0;i<n;i++){
+    emp.length++
+        emp[emp.length-1]="_"
+}
+console.log(emp)
+
+                 (OR)
+nums=[0,0,1,1,1,2,2,3,3,4]
+emp=[]
+count=0
+for(i of nums){
+    if(!emp.includes(i))
+        emp.push(i)
+    else
+    count++
+}
+for(let i=0;i<count;i++)
+    {
+        emp.push("_")
+    }
+    console.log(emp)
+2) Input: nums = [3,2,2,3]
+Input2: val = 3
+Output:[2,2,,]
+Explanation: Insert under scores which are equal to occurrences of input 2 value
+
+
+nums=[0,0,1,1,1,2,2,3,3,4]
+val=3
+emp=[]
+count=0
+for(i of nums){
+    if(i==val)
+        count++
+    else
+    emp.push(i)
+}
+for(let i=0;i<count;i++){
+        emp[emp.length++]="_"
+
+}
+console.log(emp)
