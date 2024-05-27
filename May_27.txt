@@ -1,0 +1,54 @@
+1) Write a program to print the below pattern based on number of rows
+rows=4
+1
+2 5
+3 6 8
+4 7 9 10
+
+n=prompt()
+for(i=1;i<=n;i++)
+    {
+        s=""
+        k=n-1
+        value=i
+        for(j=1;j<=i;j++){
+            s=s+value+" "
+            value+=k
+            k--
+        }
+        console.log(s)
+    }
+
+
+
+2) Write a program to print the below pattern
+
+input: Enter number: 12345
+
+1   5
+ 2 4
+  3
+ 2 4
+1   5
+
+
+n=prompt("enter a number: ")
+k=0
+m=n.length
+if(m%2){
+for(i=1;i<=m;i++){
+    s=""
+    for(j=1;j<=m;j++)
+        {
+            if(i==j)
+                s=s+n[i-1]+""
+            else if(i+j==m+1)
+                s=s+n[m-i]+""
+            else
+            s=s+" "
+        }
+    console.log(s)
+}
+}
+else
+console.log("enter a odd length number")
