@@ -1,0 +1,79 @@
+1) Write a program to print the below pattern based on no of rows 
+ Input: rows : 5
+Output:
+
+* * * * *
+ *      *
+  *    *
+    * *
+     *
+
+rows=+prompt("enter number of rows:")
+for(i=1;i<=rows;i++){
+    s=""
+    for(k=1;k<=i;k++){
+        s=s+" "
+    }
+    for(j=1;j<=rows-i+1;j++){
+        if(i==1 || i+j==rows+1 || j==1)
+        s=s+"* "
+    else
+    s=s+"  "
+    }
+    console.log(s)
+}
+
+
+2) Write a program to print the below pattern based on no of rows
+Input : rows: 5
+Output
+
+*
+* *
+* * *
+* *
+*
+
+rows=+prompt("enter number of rows : ");
+for(i=1;i<=Math.ceil(rows/2);i++){
+    s=""
+    for(j=1;j<=i;j++){
+        s=s+"* "
+    }
+    console.log(s)
+}
+for(k=rows-Math.ceil(rows/2);k>=1;k--)
+    {
+        a=""
+        for(p=k;p>=1;p--){
+            a=a+"* "
+        }
+        console.log(a)
+    }
+
+3) Write  a program to print the below pattern based in no of rows
+Input: rows: 4
+Output:
+       
+          1
+       2   3
+      4      6
+     7  8  9  10
+
+rows=+prompt("enter a number of rows: ")
+value=1
+for(i=1;i<=rows;i++){
+    s=""
+    for(k=1;k<=rows-i;k++){
+        s=s+" "
+    }
+    for(j=1;j<=i;j++){
+        if(j==1 || i==j || i==rows)
+        s=s+value+" "
+        else
+        s=s+"  "
+
+        value++
+    }
+    console.log(s)
+}
