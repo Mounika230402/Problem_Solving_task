@@ -1,0 +1,118 @@
+
+input: ["Helloworld", "google", "Catch", "Mouse", "bsnl"]
+
+output:
+Hollowerld
+geoglo
+Catch
+Meuso
+blns
+
+input=prompt("enter array of strings: ").split(" ")
+vowels="aeiouAEIOU"
+
+for(i of input){
+    vStr=""
+    c=0
+    for(j of i){
+        if(vowels.includes(j)){
+            vStr+=j
+            c++
+        }
+    }
+    let res=""
+    ind=0
+    if(c==0){ 
+        console.log(i.split("").sort().join(""))
+    }
+    else{
+    vStr=vStr.split("").reverse().join("")
+    for(j of i){
+        if(vowels.includes(j)){
+            res+=vStr[ind]
+            ind++
+        }
+        else
+        res+=j    
+    }
+    console.log(res)
+}
+}
+
+
+2) 
+
+Enter no of rows: 4
+2 
+3 11
+5 13 19
+7 17 23 29
+
+
+rows=+prompt("enter no of rows :")
+num=(rows*(rows+1))/2
+let value=2
+arr=[]
+count=0
+while(num!=count){
+    flag=0
+    for(let i=2;i<value;i++){
+        if(value%i==0)
+            {
+                flag=1
+                break
+            }
+    }
+    if(flag==0)
+        {
+            arr.push(value)
+            count++
+        }
+    value++
+}
+for(i=1;i<=rows;i++)
+    {
+        s=""
+        k=rows-1
+        value=i-1
+        for(j=1;j<=i;j++){
+            s=s+arr[value]+" "
+            value+=k
+            k--
+        }
+        console.log(s)
+    }
+
+
+3) enter number of rows :4
+output:
+1
+1 0
+1 0 1
+1 0 1 0
+
+
+rows=+prompt("enter number of rows:")
+for(i=1;i<=rows;i++){
+    value=1
+    s=""
+    for(j=1;j<=i;j++){
+        s+=value+" "
+        if(value==1)
+            value=0
+        else
+        value=1
+    }
+    console.log(s)
+}
+
+4) enter a string: happy
+
+str=prompt("enter a string: ")
+for(i=0;i<str.length;i++){
+    s=""
+    for(j=i;j<str.length;j++){
+        s+=str[j]+" "
+    }
+    console.log(s)
+}
